@@ -11,7 +11,6 @@
 		<link rel="stylesheet" type="text/css" href="<?php echo esc_url(get_template_directory_uri()); ?>/css/reset.css">
 		<link rel="stylesheet" type="text/css" href="<?php echo esc_url(get_template_directory_uri()); ?>/css/link_css.css" as="style">
 		<link link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" as="style">
-		<!-- <script type="text/javascript" src="<?php echo esc_url(get_template_directory_uri()); ?>/shared/js/jquery-2.2.4.min.js"></script> -->
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 		<script type="text/javascript" src="<?php echo esc_url(get_template_directory_uri()); ?>/shared/js/func.js"></script>
 		<script src="https://unpkg.com/scrollreveal"></script>
