@@ -45,8 +45,8 @@
 						<img class="item-img lazy" src="<?php echo esc_url(get_template_directory_uri()); ?>/shared/images/lazyimg.gif" data-original="<?php echo esc_url(get_template_directory_uri()); ?>/shared/images/service/img_service-passion.jpg" alt="パッション採用">
 						<div class="item-service">
 							<p class="item-service__num">01</p>
-							<p class="item-service__hl">外国人人材紹介</p>
-							<p class="item-service__txt"><span class="bold">- パッション採用 -</span><br />WORLDiオリジナルの採用プロセスで外国人の定着率が向上します。</p>
+							<p class="item-service__hl">外国人人材紹介<div class="bold">- パッション採用 -</div></p>
+							<p class="item-service__txt">WORLDiオリジナルの採用プロセスで外国人の定着率が向上します。</p>
 						</div>
 					</li>
 					<li class="servicelist__item">

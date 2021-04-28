@@ -130,8 +130,15 @@
             background-color: #FFFFFF;
             box-shadow: 0 3px 3px rgba(0, 0, 0, .1);
             position: relative;
+            overflow: hidden;
             &>a {
               @include contents__link;
+            }
+            &:hover {
+              .item-img {
+                transform: scale(1.2, 1.2);
+                transition: 1s all;
+              }
             }
             .item-service {
               padding: 3rem 2rem;
