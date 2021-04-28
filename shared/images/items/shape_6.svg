@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="654.956" height="590.609" viewBox="0 0 654.956 590.609">
+  <defs>
+    <linearGradient id="linear-gradient" x1="0.5" x2="0.5" y2="1" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#05edfc" stop-opacity="0.702"/>
+      <stop offset="1" stop-color="#006c9d" stop-opacity="0.702"/>
+    </linearGradient>
+  </defs>
+  <path id="多角形_3" data-name="多角形 3" d="M415.5,0,554,231.5,415.5,463h-277L0,231.5,138.5,0Z" transform="matrix(0.966, -0.259, 0.259, 0.966, 0, 143.386)" fill="url(#linear-gradient)"/>
+</svg>

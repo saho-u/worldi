@@ -1,0 +1,332 @@
+// home common
+
+.container {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  &-inner {
+    margin: 0 auto;
+    padding: 10rem 0;
+    max-width: 120rem;
+    position: relative;
+    z-index: $layer-top;
+    &.small {
+      max-width: 100rem;
+    }
+    .main {
+      &__hl {
+        text-align: center;
+        z-index: $layer-top;
+        .hl {
+          @include size-xxl;
+          font-weight: bold;
+          z-index: $layer-top;
+          &_sub {
+            @include size-sm;
+            color: $font-color__sub;
+            z-index: $layer-top;
+          }
+        }
+      }
+      &__content {
+        position: relative;
+        margin-top: 6rem;
+        z-index: $layer-top;
+        &-hl {
+          @include size-xs;
+          text-align: center;
+          background-color: $font-color__sub;
+          color: #FFFFFF;
+        }
+      }
+    }
+  }
+  &__top {
+    height: 70rem;
+    .container-inner {
+      .image-block {
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 65rem;
+        img {
+          box-shadow: 0 8px 8px 0 rgba(0, 0, 0, .1);
+        }
+      }
+      .text-block {
+        position: absolute;
+        left: 0;
+        top: 25rem;
+        z-index: 2;
+        color: $font-color;
+        font-family: 'Sofia Pro';
+        .top {
+          &-text {
+            font-size: 9rem;
+            font-weight: bold;
+          }
+          &-message {
+            font-size: 3.2rem;
+            margin-top: 3rem;
+            letter-spacing: 3.2px;
+            color: $font-color__sub;
+            font-weight: bold;
+          }
+        }
+      }
+      .top-mv__bar {
+        position: absolute;
+        top: 18rem;
+        right: 50%;
+        width: 25%;
+      }
+      .w-logo-wrapper {
+        width: 95%;
+        position: absolute;
+        top: -200px;
+        left: 5%;
+        z-index: -1;
+      }
+    }
+  }
+  &__mission {
+    text-align: center;
+    .container-inner {
+      padding-top: 20rem;
+      .mission {
+        font-size: 4.5rem;
+        font-weight: bold;
+        z-index: $layer-top;
+        &__txt {
+          margin-top: 5rem;
+          @include size-sm;
+        }
+      }
+    }
+  }
+  &__service {
+    background: linear-gradient(to top, rgba(246, 246, 246, .6), rgba(246, 246, 246, 0));
+    z-index: $layer-bg;
+    &::after {
+      content: "";
+      position: absolute;
+      right: 0;
+      top: 15rem;
+      width: 35%;
+      height: 75rem;
+      background: linear-gradient(to right, #00BDC9, #68A7E8);
+      z-index: $layer-accent;
+    }
+    .container-inner {
+      .main__content {
+        .servicelist {
+          display: flex;
+          justify-content: space-between;
+          z-index: $layer-top;
+          width: 100%;
+          &__item {
+            height: 35rem;
+            width: calc(100% / 4 - 1rem);
+            background-color: #FFFFFF;
+            box-shadow: 0 3px 3px rgba(0, 0, 0, .1);
+            position: relative;
+            &>a {
+              @include contents__link;
+            }
+            .item-service {
+              padding: 3rem 2rem;
+              position: relative;
+              display: flex;
+              flex-direction: column;
+              height: 10rem;
+              &__num {
+                color: $main-color;
+                font-weight: bold;
+                position: absolute;
+                top: -3.6rem;
+                right: 2rem;
+                font-size: 3.6rem;
+                &::before {
+                  content: "#";
+                  font-size: 2.4rem;
+                  margin-right: .3rem;
+                }
+              }
+              &__hl {
+                @include size-md;
+                margin-bottom: .5rem;
+                font-weight: bold;
+              }
+              &__txt {
+                @include size-xxs;
+                color: $font-color__sub;
+                margin-top: auto;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .top-bg {
+    position: relative;
+    width: 80%;
+    .bg-text {
+      position: absolute;
+      z-index: $layer-bg-txt;
+      left: 0;
+      bottom: -30rem;
+      width: 100%;
+    }
+  }
+  .casestudylist {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    width: 100%;
+    &__item {
+      margin-top: 1.2rem;
+      width: calc(20% - 1.2rem);
+      max-width: 20rem;
+      max-height: 20rem;
+      overflow: hidden;
+    }
+  }
+  .clientslist {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-items: center;
+    width: 100%;
+    &__item {
+      width: 16rem;
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .container {
+    &-inner {
+      padding: 5rem 3%;
+      width: 94%;
+      .main {
+        &__hl {
+          .hl {
+            @include size-lg;
+            &_sub {
+              @include size-xs;
+            }
+          }
+        }
+        &__content {
+          margin-top: 3rem;
+          &-hl {
+            @include size-xxs;
+          }
+        }
+      }
+    }
+    &__top {
+      height: 60rem;
+      .container-inner {
+        padding: 0 3%;
+        .image-block {
+          top: 2rem;
+          right: -6rem;
+          width: 36rem;
+        }
+        .top-mv__bar {
+          top: 1rem;
+          right: 50%;
+          width: 40%;
+        }
+        .text-block {
+          left: 3rem;
+          top: 40rem;
+          .top {
+            &-text {
+              font-size: 4rem;
+              display: inline-block;
+              margin-right: 1rem;
+              color: $font-color__sub;
+            }
+            &-message {
+              opacity: .7;
+              margin-top: 1rem;
+              @include size-md;
+            }
+          }
+        }
+        .w-logo-wrapper {
+          width: 80%;
+          z-index: 1;
+          opacity: .1;
+          top: 24rem;
+          left: -3rem;
+        }
+      }
+      &::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        background: linear-gradient(to right, #00BDC9, #68A7E8);
+        width: 30%;
+        height: 10rem;
+        bottom: -2rem;
+        z-index: $layer-minus;
+      }
+    }
+    &__mission {
+      .container-inner {
+        padding-top: 0;
+        .mission {
+          @include size-xxl;
+          &__txt {
+            margin-top: 2rem;
+            @include size-xxs;
+          }
+        }
+      }
+    }
+    &__service {
+      &::after {
+        width: 40%;
+        height: 30rem;
+        top: 5rem;
+        z-index: $layer-minus;
+      }
+      .container-inner {
+        .main__content {
+          .servicelist {
+            display: block;
+            width: 100%;
+            &__item {
+              margin-bottom: 2rem;
+              height: 100%;
+              width: 100%;
+              .item-service {
+                height: auto;
+                &__hl {
+                  min-height: unset;
+                  @include size-sm;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+    .casestudylist {
+      &__item {
+        width: calc(20% - .8rem);
+      }
+    }
+    .clientslist {
+      justify-content: space-around;
+      &__item {
+        width: 8rem;
+      }
+    }
+  }
+}

@@ -1,0 +1,162 @@
+@mixin txt-align-bottom {
+  display: flex;
+  flex-direction: column;
+  .item-bottom {
+    margin-top: auto !important;
+  }
+}
+@mixin contents__link {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 100;
+}
+
+.main-inner {
+  max-width: 1000px;
+  margin: 80px auto;
+
+  .page-top {
+    margin-bottom: 80px;
+    position: relative;
+  }
+
+  /* lead */
+  .lead {
+    text-align: center;
+    width: 100%;
+    .section-ttl {
+      margin: 0 0 10px;
+      font-size: 3rem;
+      letter-spacing: 3px;
+      font-weight: 600;
+      text-align: center;
+      color: rgba(0, 0, 0, 0.7);
+    }
+
+    .section-sub {
+      font-size: 1.8rem;
+      opacity: .7;
+      margin-top: 10px;
+    }
+
+    .lead-main {
+      margin: 0;
+      padding-bottom: 10px;
+      text-align: center;
+      color: $font-color;
+      font-weight: bold;
+
+      font-size: 3.4rem;
+      letter-spacing: 6.8px;
+    }
+
+    .lead-sub {
+      text-align: center;
+      color: #9da0a4;
+      font-size: 1.8rem;
+      letter-spacing: 1px;
+    }
+
+    .lead-text {
+      margin: 38px auto 0;
+      font-weight: 600;
+      line-height: 1.87;
+      letter-spacing: 2px;
+      text-align: center;
+      color: #45494b;
+      word-break: keep-all;
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .ct-wrap {
+    min-height: calc(100vh - 35rem);
+  }
+  p {
+    font-size: 1.2rem;
+  }
+  #home-section-service .lead {
+    margin-bottom: -30px;
+  }
+
+  .lead {
+    .section-ttl {
+      margin: 0;
+      font-size: 2.4rem;
+      letter-spacing: 3.4px;
+    }
+
+    .section-sub {
+      font-size: 1.2rem;
+      letter-spacing: .7px;
+    }
+
+    .lead-main {
+      font-size: 2rem;
+      font-weight: 600;
+      letter-spacing: 3.8px;
+    }
+
+    .lead-sub {
+      font-size: 1.8rem;
+      letter-spacing: 1px;
+    }
+
+    .lead-text {
+      margin: 38px auto 0;
+      width: 90%;
+      font-size: 1rem;
+      font-weight: 600;
+      line-height: 1.87;
+      letter-spacing: 2px;
+      text-align: center;
+      color: #45494b;
+      word-break: keep-all;
+    }
+  }
+
+  a.btn {
+    margin: 0 auto;
+    background-image: linear-gradient(99deg, #1e7dde, #00c4c4);
+    color: #FFFFFF;
+    text-decoration: none;
+    box-shadow: 0 9px 10px 0 rgba(0, 0, 0, 0.1);
+  }
+}
+
+
+
+
+/*1.フェードインアニメーションの指定*/
+.move-slow {
+  opacity: 0; /*一瞬表示されるのを防ぐ*/
+}
+.fadeInDown {
+    animation-name: fadeInDown;
+    animation-duration: 5s;
+    animation-fill-mode: forwards;
+}
+@keyframes fadeInDown {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+    transform: translate(0);
+  }
+}
+// /*2.上下の動きを指定*/
+// .updown {
+//   transform: translateY(-100px);
+// }
+// .downup {
+//   transform: translateY(100px);
+// }
+// /*3.左右の動きを指定*/
+// .sect02 {
+//   overflow: hidden;
+// }

@@ -1,0 +1,92 @@
+// message
+.message {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  .hc {
+    width: 100%;
+    @include size-xl;
+    font-weight: bold;
+  }
+  .m__item {
+    margin-top: 2rem;
+    width: calc(50% - 2rem);
+    &-name {
+      padding-top: 2rem;
+      text-align: right;
+    }
+  }
+  img {
+    box-shadow: 0 8px 8px 0 rgba(0, 0, 0, .1);
+  }
+  @media screen and (max-width: 769px) {
+    display: block;
+    width: 96%;
+    margin: 0 auto;
+    .hc {
+      text-align: center;
+    }
+    img {
+      margin-bottom: 2rem;
+    }
+    .m__item {
+      width: 100%;
+    }
+  }
+}
+
+
+// informatikon
+.company-list__item {
+  margin: 0 auto;
+  width: 50rem;
+}
+
+.list-item {
+  display: flex;
+  margin-bottom: 3.2rem;
+  @include size-sm;
+
+  dt {
+    width: 10rem;
+    margin-right: 3.2rem;
+    text-align: right;
+    color: rgba(0, 0, 0, 0.4);
+  }
+
+  dd {
+    width: auto;
+    font-weight: bold;
+    color: rgba(0, 0, 0, 0.7);
+  }
+}
+@media screen and (max-width: 769px) {
+  .company-list__item {
+    width: 90vw;
+  }
+
+  .list-item {
+    flex-direction: column;
+    dt {
+      width: 100%;
+      margin: 0 0 2rem 0;
+      text-align: left;
+      position: relative;
+      &::after {
+        content: "";
+        position: absolute;
+        width: 3.2rem;
+        height: .1rem;
+        background-color: rgba(0, 0, 0, 0.2);
+        bottom: -.8rem;
+        left: 0;
+      }
+    }
+
+    dd {
+      width: 100%;
+      color: rgba(0, 0, 0, 0.7);
+    }
+  }
+}

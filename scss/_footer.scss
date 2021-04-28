@@ -1,0 +1,192 @@
+/* footer */
+
+.footer {
+  position: relative;
+  background-color: #2F2E2E;
+  width: 100%;
+  padding: 6rem 6rem 4rem;
+  box-sizing: border-box;
+  &-inner {
+    color: #FFFFFF;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    &__left {
+      display: flex;
+      flex-direction: column;
+      .footer-worldi {
+        &__lead {
+          @include size-xxl;
+          font-weight: bold;
+          margin-bottom: 12rem;
+        }
+      }
+    }
+    &__right {
+      margin: 0 0 0 auto;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+    }
+    &__bottom {
+      margin-top: 2rem;
+      display: flex;
+    }
+  }
+  &__lead {
+    @include size-xxl;
+    font-weight: bold;
+    margin-bottom: 12rem;
+    color: rgba($color: #FFFFFF, $alpha: .8);
+  }
+  &__logo {
+    width: 20rem;
+  }
+  &__sns {
+    @include size-xl;
+    margin: 2rem 0 0;
+  }
+  &__copyright {
+    @include size-xxxs;
+    font-weight: bold;
+  }
+  &__menu {
+    display: flex;
+    @include size-sm;
+    .menulist {
+      &__item {
+        margin: 2rem 4.8rem 0 0;
+        transition: .2s ease-in-out;
+        &:first-of-type {
+          margin-top: 0;
+        }
+        &.sub {
+          font-weight: normal;
+          margin: .4rem 0 0;
+          @include size-xxs;
+          color: rgba($color: #FFFFFF, $alpha: .8);
+        }
+        a:hover {
+          color: rgba($color: #FFFFFF, $alpha: .4);
+          transition: .2s ease-in-out;
+        }
+      }
+    }
+    margin-top: 1rem;
+  }
+  &__contact {
+    margin: auto 0 0 auto;
+    @include size-xxs;
+    .contactlist {
+      @include size-sm;
+      &__item {
+        font-weight: bold;
+        margin-top: 1rem;
+        &::before {
+          font-family: "Font Awesome 5 Free";
+          padding-right: 1rem;
+        }
+        &.mail::before {
+          content: "\f0e0";
+        }
+        &.tel::before {
+          content: "\f095";
+        }
+      }
+    }
+  }
+  &__nav {
+    margin: 0;
+    padding-left: 2rem;
+    @include size-xxxs;
+  }
+  &::after {
+    content: '';
+    position: absolute;
+    z-index: 1;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 1rem;
+    background: linear-gradient(to right, #00BDC9, #68A7E8);
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .footer {
+    padding: 10% 3% 8%;
+    &-inner {
+      align-items: flex-start;
+      &__right {
+        justify-content: space-between;
+
+      }
+    }
+    &__logo {
+      width: 16rem;
+    }
+    &__nav {
+      margin-top: 2rem;
+    }
+    &__copyright {
+    }
+    &__contact {
+      .contactlist__item {
+        margin: 0 0 1.6rem;
+      }
+    }
+    &__menu {
+      @include size-xs;
+      margin: 0 0 3rem;
+      .menulist__item {
+        margin: 1.6rem 0 0;
+        &.sub {
+          margin-top: 1.2rem;
+        }
+        &:first-child {
+          margin-top: 0;
+        }
+      }
+    }
+    &__sns {
+      margin: 0 auto;
+      a {
+        margin-left: 2rem;
+      }
+    }
+    #page_top {
+      width: 5rem;
+      height: 5rem;
+      position: fixed;
+      right: 2rem;
+      bottom: 0;
+      background: linear-gradient(to right, #00BDC9, #68A7E8);
+      opacity: 0.6;
+      border-radius: 50%;
+      z-index: 1000;
+      a {
+        position: relative;
+        display: block;
+        width: 5rem;
+        height: 5rem;
+        text-decoration: none;
+        &::before {
+          font-family: 'Font Awesome 5 Free';
+          font-weight: 900;
+          content: '\f106';
+          font-size: 2.5rem;
+          color: #fff;
+          position: absolute;
+          width: 2.5rem;
+          height: 2.5rem;
+          top: .8rem;
+          bottom: 0;
+          right: 0;
+          left: 0;
+          margin: auto;
+          text-align: center;
+        }
+      }
+    }
+  }
+}

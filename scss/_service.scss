@@ -1,0 +1,178 @@
+.service-item {
+  display: flex;
+  position: relative;
+  height: 80rem;
+  .text-block {
+    position: absolute;
+    top: 128px;
+    right: 16rem;
+    width: 41rem;
+    .title-main {
+      font-weight: bold;
+      @include size-xxl;
+      margin-bottom: 7rem;
+      letter-spacing: 1rem;
+      border-bottom: 1px solid;
+      padding-bottom: 1rem;
+    }
+    .description {
+      &-main {
+        @include size-lg;
+        font-weight: bold;
+        margin-bottom: 2rem;
+        color: #4BA69D;
+      }
+      &-sub {
+        color: $font-color__sub;
+      }
+    }
+  }
+  .image-block {
+    position: absolute;
+    top: 0;
+    z-index: -1;
+    .front {
+      position: absolute;
+      top: 83px;
+    }
+    .back {
+      position: absolute;
+      top: 0;
+    }
+  }
+  &.right {
+    .text-block {
+      right: 0;
+    }
+    .image-block {
+      left: 0;
+      .front {
+        width: 70rem;
+        left: -22rem;
+      }
+    }
+  }
+  &.left {
+    .text-block {
+      left: 0;
+    }
+    .image-block {
+      right: 0;
+      .front {
+        width: 70rem;
+        right: -22rem;
+      }
+    }
+  }
+  &.service__passion {
+    .image-block {
+      .back {
+        width: 100rem;
+        top: -30rem;
+        left: -10rem;
+      }
+    }
+  }
+  &.service__consulting {
+    .image-block {
+      .back {
+        width: 70rem;
+        right: 0;
+      }
+    }
+  }
+  &.service__japanese {
+    .image-block {
+      .back {
+        width: 80rem;
+      }
+    }
+  }
+  &.service__abroad {
+    .image-block {
+      .front {
+        width: 70rem;
+        right: -22rem;
+      }
+      .back {
+        width: 80rem;
+        top: -10rem;
+        right: 0;
+      }
+    }
+  }
+  &.service__other {
+    .image-block {
+      .front {
+        width: 70rem;
+        left: -22rem;
+      }
+      .back {
+        width: 80rem;
+        top: 0;
+        left: -10rem;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .service-item {
+    margin: 12rem 0 0;
+    display: block;
+    height: 100%;
+    .title-block {
+      width: 100%;
+      .title-main {
+        @include size-xl;
+        font-weight: bold;
+        text-align: center;
+      }
+    }
+
+    &.right,
+    &.left {
+      .image-block {
+        position: relative;
+        .front {
+          top: 4rem;
+          width: 35rem;
+        }
+        .back {
+          top: 0;
+          width: 40rem;
+        }
+      }
+    }
+    &.right {
+      .image-block {
+        .front {
+          left: -8rem;
+        }
+        .back {
+          left: 10rem;
+        }
+      }
+    }
+    &.left {
+      .image-block {
+        .front {
+          right: -8rem;
+        }
+        .back {
+          right: 10rem;
+        }
+      }
+    }
+    .text-block {
+      position: unset;
+      width: 80%;
+      margin: 32rem auto 0;
+      padding: 0 5%;
+    }
+    .button-block {
+      margin-top: 3rem;
+    }
+  }
+
+}

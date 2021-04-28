@@ -1,0 +1,161 @@
+@charset "UTF-8";
+@import "_color.scss";
+
+/* common
+===================================== */
+/* sp */
+@font-face {
+  font-family: 'supria';
+  src: url("../fonts/SupriaSansBold.otf") format("opentype"), url("../fonts/SupriaSansBold.woff") format("woff"), url("../fonts/SupriaSansBold.woff2") format("woff2");
+}
+
+html {
+  /* font-size:1.0rem = 10px */
+  font-size: 62.5%;
+}
+
+body {
+  font-family: '游ゴシック', 'Yu Gothic', '游ゴシック体', 'YuGothic', 'ヒラギノ角ゴ ProN W3', 'Hiragino Kaku Gothic ProN', 'HiraKakuProN-W3', 'メイリオ', 'Meiryo', 'Droid Sans', 'Roboto';
+  // font-family: "Hiragino Sans","Hiragino Kaku Gothic ProN",Meiryo,sans-serif;
+  font-size: 12px;
+  font-size: 1.2rem;
+  font-weight: 500;
+  -webkit-text-size-adjust: 100%;
+  color: $font-color;
+  background: #fff;
+}
+
+.all-wrap {
+  overflow: hidden;
+  width: 100%;
+}
+
+img {
+  width: 100%;
+}
+
+* {
+  line-height: 1.2em;
+  letter-spacing: 1.2px;
+}
+
+p {
+  line-height: 2em;
+}
+
+.pc {
+  display: none;
+}
+
+.sp {
+  display: block;
+}
+
+i {
+  padding-right: 5px;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+.underline {
+  position: relative;
+  &::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 1rem;
+    bottom: -.3rem;
+    left: 0;
+    z-index: -1;
+    background: linear-gradient(to right, $key-color_sub__light, $main-color__light);
+  }
+}
+
+.text-right {
+  text-align: right;
+}
+
+@media screen and (min-width: 769px) {
+  /* pc */
+
+  body {
+    font-size: 16px;
+    font-size: 1.6rem;
+  }
+
+  .pc {
+    display: block;
+  }
+
+  .sp {
+    display: none;
+  }
+
+  i {
+    padding-right: 10px;
+  }
+}
+
+.layer-top {
+  z-index: 2;
+}
+
+.layer-middle {
+  z-index: 1;
+}
+
+/* button */
+.button-block {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-top: 60px;
+}
+
+a.btn {
+  display: block;
+  width: 220px;
+  height: 44px;
+  line-height: 44px;
+  border-radius: 100px;
+  background: rgba(0, 0, 0, 0.7);
+  box-shadow: 0 4px 6px 0 rgba(0, 0, 0, 0.1);
+  font-size: 1.4rem;
+  font-weight: 500;
+  text-align: center;
+  color: #FFFFFF;
+  cursor: pointer;
+  transition: all 300ms;
+  margin: 0 auto;
+
+  &:hover {
+    color: #FFFFFF;
+    text-decoration: none;
+    background-image: linear-gradient(100deg, #1e7dde, #00c4c4);
+    box-shadow: 0 9px 10px 0 rgba(0, 0, 0, 0.1);
+    transform: translateY(-3px);
+  }
+
+  &.image-box {
+    img, .service__text {
+      transition: all 500ms;
+    }
+
+    &:hover {
+      img, .service__text {
+        transform: translateY(-5px);
+        transition: all 500ms;
+      }
+
+      img {
+        box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.1);
+      }
+    }
+  }
+  & + a {
+    margin-top: 3rem;
+  }
+}
