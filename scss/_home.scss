@@ -134,6 +134,9 @@
             &>a {
               @include contents__link;
             }
+            .item-img {
+              transition: 1s all;
+            }
             &:hover {
               .item-img {
                 transform: scale(1.2, 1.2);
